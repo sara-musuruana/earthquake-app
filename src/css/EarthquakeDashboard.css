@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #333;
+  font-size: 18px;
+}
+
+.warning {
+  color: #ff5733;
+  font-weight: 600;
+}
+
+.earthquake-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.earthquake-item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.earthquake-item:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.earthquake-magnitude {
+  font-size: 18px;
+  color: #ff5733;
+}
+
+.earthquake-location {
+  font-size: 18px;
+  color: #0056b3;
+}
+
+.earthquake-time {
+  font-size: 18px;
+  color: #888;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-item {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.page-item:hover {
+  background-color: #0056b3;
+}
+
+.active {
+  background-color: #0056b3;
+}
+
+.custom-previous-button,
+.custom-next-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.custom-previous-button:hover,
+.custom-next-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-previous-button:focus,
+.custom-next-button:focus {
+  outline: none;
+}
+
+.custom-previous-button,
+.custom-next-button {
+  text-align: center;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+}
+
+.loading-dots::after {
+  display: inline-block;
+  animation: loadingAnimation 1s infinite steps(1);
+  content: "";
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-input-form {
+  display: flex;
+  align-items: center;
+}
+
+.page-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 230px;
+}
+
+.page-input-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-input-button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-button-single-page {
+  opacity: 0.5;
+}
+.pagination-button-single-page:hover {
+  cursor: default;
+  background-color: #007bff;
+}
+
+.hidden {
+  display: none;
+}
